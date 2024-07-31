@@ -12,134 +12,82 @@
     <div id="header">
         <div id="container">
             <nav>
-                <img src="logo.png" alt="logo">
-                <ul id="sidemenu">
+                <img src="logo.png" alt="logo" class="logo">
+                <ul id="sidemenu" class="sidemenu">                   
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>                    
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                
             </nav>
             <div class="header-text">
                 <p>Undergraduate Software Engineer</p>
-                <h1>Hi, I'm <span>Malik Wassam </span><br> Shabbir From Pakistan</h1>
+                <h1>Hi, I'm <span id="auto-writer">Malik Wassam Shabbir</span> <br> From Pakistan</h1>
             </div>
         </div>
-    </div>
-    <script>
-        var sidemenu = document.getElementById("sidemenu");
-    
-        function openmenu() {
-            sidemenu.style.right = "0";
-        }
-    
-        function closemenu() {
-            sidemenu.style.right = "-200px";
-        }
-    </script>
- 
-    
-    <!-- Other sections like About, Portfolio, Contact -->
-</body>
-
-<!--<body>
-    <div id="header">
-        <div id="container">
-            <nav>
-                <img src="images/logo.png" alt="logo">
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <i class="fa-solid fa-bars"onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-               <p>Undergraduate Software Engineer</p>
-               <h1>Hi, I'm <span>Malik Wassam </span><br> Shabbir From Pakistan</h1>
-            </div>
-        </div>
-    </div> -->
-    
+    </div> 
 <!-- ---------about-------- -->
-<body>
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="WhatsApp Image 2024-02-25 at 11.53.15_bdacb0a4.jpg">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>
-                        As a dedicated undergraduate Software Engineering student at Bahria University, I am developing a strong foundation in multiple programming languages, including Java, Python, C++, and C#. My academic journey is providing me with the knowledge and skills necessary for software development, problem-solving, and system design.
-                    </p>
-                    <div class="tab-titles">              
-                        <p class="tab-links active-links" onclick="opentab(event, 'Skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="Skills">
-                        <ul>
-                            <li><span>Programming Language</span><br>Python | Java | C++ | C#</li>
-                            <li><span>Web Developer</span><br>Web app development</li>                 
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>2024-current</span><br>Gaining Experience</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2024</span><br>Undergraduate Software Engineer</li>
-                            <li><span>2023</span><br>Inter from BCKz</li>
-                            <li><span>2021</span><br>Matric from BCKz</li>
-                        </ul>
-                    </div>
-                </div>
+<div id="about" class="container mt-5">
+    <div class="row justify-content-center text-center">
+        <div class="col-md-12">
+            <img src="WhatsApp Image 2024-02-25 at 11.53.15_bdacb0a4.jpg" class="img-fluid rounded-circle" alt="Malik Wassam">
+            <h2 class="sub-title">ABOUT ME</h2>
+            <p>
+                As a dedicated undergraduate Software Engineering student at Bahria University, I am developing a strong foundation in multiple programming languages, including Java, Python, C++, and C#. My academic journey is providing me with the knowledge and skills necessary for software development, problem-solving, and system design.
+            </p>
+            <div class="tab-titles">
+                <p class="tab-links active-links" onclick="opentab(event, 'Skills')">Skills</p>
+                <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="Skills">
+                <ul>
+                    <li><span>Programming Languages:</span> Python, Java, C++, C#</li>
+                    <li><span>Web Developer:</span> Web app development</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>2024-current:</span> Gaining Experience</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2024:</span> Undergraduate Software Engineer</li>
+                    <li><span>2023:</span> Intern from BCKz</li>
+                    <li><span>2021:</span> Matric from BCKz</li>
+                </ul>
             </div>
         </div>
     </div>
-    
-    <script>
-        function opentab(event, tabname) {
-            var tablinks = document.getElementsByClassName('tab-links');
-            var tabcontents = document.getElementsByClassName('tab-contents');
+</div>
 
-            for (var i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove('active-links');
-            }
-            for (var i = 0; i < tabcontents.length; i++) {
-                tabcontents[i].classList.remove('active-tab');
-            }
-
-            event.currentTarget.classList.add('active-links');
-            document.getElementById(tabname).classList.add('active-tab');
-        }
-    </script>
-
+        
 
 <!--------------Services--------------->
-<div id="services">
+<div id="services" class="bg-light py-5">
     <div class="container">
-        <h1 class="sub-title">My Services</h1>
+        <h2 class="sub-title">My Services</h2>
         <div class="services-list">
             <div>
                 <i class="fa-solid fa-code"></i>
                 <h2>Web Development</h2>
                 <p>
-                    I have a command of HTML, CSS, 
-                    Java Script, enabling me to create visually 
-                    appealing and responsive website.
+                    I have a command of HTML, CSS, JavaScript, enabling me to create visually appealing and responsive websites.
                 </p>
-                    <a href="#">Learn More</a>
+                <a href="#">Learn More</a>
             </div>
-           
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>GUI Apps</h2>
+                <p>
+                    I have expertise in developing intuitive and engaging GUI applications, utilizing frameworks and libraries to create seamless and interactive user experiences.
+                </p>
+                <a href="#">Learn More</a>
+            </div>
         </div>
     </div>
 </div>
@@ -147,7 +95,7 @@
 <!--------------Portfolio--------------->
 <div id="portfolio">
     <div class="container">
-        <h1 class="sub-title">My Work</h1>
+        <h2 class="sub-title">My Work</h2>
         <div class="Work-list">
             <div class="Work">
                 <img src="p1.PNG">
@@ -201,36 +149,67 @@
             </div>
         </div>
     </div>
-    <div class="copyright">Made<i class="fa-solid fa-heart"></i>by Malik Wassam Shabbir</div>
+    <div class="copyright">Made</i> by Malik Wassam Shabbir</div>
 </div>
 
-    <script>
-        var  tablinks = document.getElementsByClassName("tab-links");
-        var  tabcontents = document.getElementsByClassName("tab-contents");
-        
-        function opentab(tabname){
-            for(tablink of tablinks) 
-            {
-                tablink.Classlist.remove("active-links");
-            }
-            for(tabcontent of tabcontents)
-            {
-                tabcontent.Classlist.remove("active-tab");
-            }
-            event.currentTarget.Classlist.add("atcive-link");
-            document.getElementById(tabname).classList.add("active-tab")
+
+<script>
+    // Function to toggle the menu
+function openmenu() {
+    var sidemenu = document.getElementById("sidemenu");
+    if (sidemenu.classList.contains("active")) {
+        sidemenu.classList.remove("active");
+    } else {
+        sidemenu.classList.add("active");
+    }
+}
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(event, tabname) {
+        for (var tablink of tablinks) {
+            tablink.classList.remove("active-links");
         }
-        
-        </script>
-        <script>
-            var sidemenu = document.getElementById("sidemenu")
-            function openmenu(){
-                sidemenu.style.right="0";
+        for (var tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-links");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    
+    var autoWriterElement = document.getElementById("auto-writer");
+    var words = ["Malik Wassam", "Web Developer"];
+    var index = 0;
+    var isAdding = true;
+
+    function autoWrite() {
+        var currentText = autoWriterElement.textContent;
+        if (isAdding) {
+            if (currentText.length < words[index].length) {
+                autoWriterElement.textContent = words[index].slice(0, currentText.length + 1);
+            } else {
+                isAdding = false;
+                setTimeout(autoWrite, 1000);
+                return;
             }
-            function closemenu(){
-                sidemenu.style.right="-200px";
+        } else {
+            if (currentText.length > 0) {
+                autoWriterElement.textContent = words[index].slice(0, currentText.length - 1);
+            } else {
+                isAdding = true;
+                index = (index + 1) % words.length;
             }
-        </script>
+        }
+        setTimeout(autoWrite, 150);
+    }
+
+    document.addEventListener("DOMContentLoaded", autoWrite);
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
        
         
 </body>
